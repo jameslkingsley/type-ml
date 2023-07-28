@@ -1,14 +1,14 @@
 {
-  "name": "typescript-npm-cli-template",
-  "version": "0.0.0-development",
-  "description": "A template for creating npm CLI tools using TypeScript and VSCode",
+  "name": "type-ml",
+  "version": "0.0.0",
+  "description": "",
   "files": [
     "!lib/__tests__/**/*",
     "lib/**/*",
     "bin/**/*"
   ],
   "bin": {
-    "my-command": "./bin/index.js"
+    "tml": "./bin/index.js"
   },
   "scripts": {
     "build": "tsc",
@@ -24,13 +24,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ryansonshine/typescript-npm-cli-template.git"
+    "url": "git+https://github.com/jameslkingsley/type-ml.git"
   },
   "license": "MIT",
   "author": {
-    "name": "Ryan Sonshine",
-    "email": "ryansonshine@users.noreply.github.com",
-    "url": "https://github.com/ryansonshine"
+    "name": "James Kingsley",
+    "email": "james@openplay.co.uk",
+    "url": "https://github.com/jameslkingsley"
   },
   "engines": {
     "node": ">=12.0"
@@ -52,7 +52,8 @@
   },
   "homepage": "https://github.com/ryansonshine/typescript-npm-cli-template#readme",
   "dependencies": {
-    "commander": "^7.2.0"
+    "commander": "^7.2.0",
+    "ohm-js": "^17.1.0"
   },
   "devDependencies": {
     "@ryansonshine/commitizen": "^4.2.8",

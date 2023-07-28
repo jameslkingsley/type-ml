@@ -1,0 +1,17 @@
+value int OrderId
+value int LineItemId
+value int Currency
+
+record Order {
+	OrderId id
+    Currency total
+    Set<LineItemId, LineItem> lineItems
+    Set<int, string> tags
+}
+
+record LineItem {
+	LineItemId id
+    OrderId orderId
+    Currency amount
+    string description
+}

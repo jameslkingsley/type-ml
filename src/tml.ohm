@@ -1,0 +1,27 @@
+TML {
+  Program = Statement*
+  
+  Statement = record symbol Block -- record
+    | value type symbol --value
+  
+  StatementList = Statement | LiteralStatement | FieldStatement | FieldSetStatement
+  
+  FieldStatement = symbol symbol
+  FieldSetStatement = set symbol
+  LiteralStatement = type symbol
+  
+  Block = "{" StatementList* "}"
+  
+  set = "Set<" symbolList ">"
+  
+  record = "record" ~symbol
+  value = "value" ~symbol
+  symbol = (letter | "_")+
+  symbolList = listOf<(symbol | set), ", ">
+  type = int | string | bool
+  eol = "\\n" | "\\r"
+  
+  int = "int"
+  string = "string"
+  bool = "bool"
+}
